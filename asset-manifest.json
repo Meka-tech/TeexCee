@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TeexCee/static/css/main.488ba17b.css",
-    "main.js": "/TeexCee/static/js/main.94fd17d1.js",
+    "main.js": "/TeexCee/static/js/main.60819dc7.js",
     "static/media/amico.svg": "/TeexCee/static/media/amico.2f5c8fe3430fad7288cba2896c7fc06d.svg",
     "static/media/PayLess.svg": "/TeexCee/static/media/PayLess.39ee1001a748269d45d12b25f448ba47.svg",
     "static/media/InstagramButton.svg": "/TeexCee/static/media/InstagramButton.becf24a0190b5098142d197fa0231299.svg",
@@ -12,7 +12,7 @@
     "static/media/FacebookButton.svg": "/TeexCee/static/media/FacebookButton.212d4e928dc6c5a349b6b75690e10a47.svg",
     "static/media/LocationButton.svg": "/TeexCee/static/media/LocationButton.8162a5f607b641fc03e77d45befdb228.svg",
     "static/media/WhatsappButton.svg": "/TeexCee/static/media/WhatsappButton.ed2dd9d3df2d5497d42f98abed2b5ac1.svg",
-    "static/media/InstagramLogo.svg": "/TeexCee/static/media/InstagramLogo.2122aa7e272e99a84d333e477fb15dc5.svg",
+    "static/media/InstagramLogo.svg": "/TeexCee/static/media/InstagramLogo.47b65639dd5b63b4030fc63b549e55e2.svg",
     "static/media/AlarmClockWhite.svg": "/TeexCee/static/media/AlarmClockWhite.bdbb3aa481d9eedcf1e9e13f59930698.svg",
     "static/media/WhatsappLogo.svg": "/TeexCee/static/media/WhatsappLogo.667c191c68232d56191f3a0ec9461352.svg",
     "static/media/LocationWhiteIcon.svg": "/TeexCee/static/media/LocationWhiteIcon.8e156d170e1f05441389159e7eda802a.svg",
@@ -29,10 +29,10 @@
     "static/media/BagWhite.svg": "/TeexCee/static/media/BagWhite.2d5dd0f5dabe605d96b49c175acedc99.svg",
     "static/media/NairaSign.svg": "/TeexCee/static/media/NairaSign.1fa8fe0aca639f7003ee3cce0324db5e.svg",
     "main.488ba17b.css.map": "/TeexCee/static/css/main.488ba17b.css.map",
-    "main.94fd17d1.js.map": "/TeexCee/static/js/main.94fd17d1.js.map"
+    "main.60819dc7.js.map": "/TeexCee/static/js/main.60819dc7.js.map"
   },
   "entrypoints": [
     "static/css/main.488ba17b.css",
-    "static/js/main.94fd17d1.js"
+    "static/js/main.60819dc7.js"
   ]
 }
