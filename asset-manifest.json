@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TeexCee/static/css/main.488ba17b.css",
-    "main.js": "/TeexCee/static/js/main.1bb49106.js",
+    "main.js": "/TeexCee/static/js/main.2e2ba4c7.js",
     "static/media/amico.svg": "/TeexCee/static/media/amico.2f5c8fe3430fad7288cba2896c7fc06d.svg",
     "static/media/PayLess.svg": "/TeexCee/static/media/PayLess.39ee1001a748269d45d12b25f448ba47.svg",
     "static/media/InstagramButton.svg": "/TeexCee/static/media/InstagramButton.becf24a0190b5098142d197fa0231299.svg",
@@ -29,10 +29,10 @@
     "static/media/BagWhite.svg": "/TeexCee/static/media/BagWhite.2d5dd0f5dabe605d96b49c175acedc99.svg",
     "static/media/NairaSign.svg": "/TeexCee/static/media/NairaSign.1fa8fe0aca639f7003ee3cce0324db5e.svg",
     "main.488ba17b.css.map": "/TeexCee/static/css/main.488ba17b.css.map",
-    "main.1bb49106.js.map": "/TeexCee/static/js/main.1bb49106.js.map"
+    "main.2e2ba4c7.js.map": "/TeexCee/static/js/main.2e2ba4c7.js.map"
   },
   "entrypoints": [
     "static/css/main.488ba17b.css",
-    "static/js/main.1bb49106.js"
+    "static/js/main.2e2ba4c7.js"
   ]
 }
