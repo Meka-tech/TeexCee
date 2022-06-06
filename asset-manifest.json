@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/TeexCee/static/css/main.488ba17b.css",
-    "main.js": "/TeexCee/static/js/main.15be0d32.js",
+    "main.js": "/TeexCee/static/js/main.2342c99a.js",
     "static/media/amico.svg": "/TeexCee/static/media/amico.2f5c8fe3430fad7288cba2896c7fc06d.svg",
+    "static/media/MobileSvg.svg": "/TeexCee/static/media/MobileSvg.92ba1825eb286cfb159b76acd7431e6a.svg",
     "static/media/PayLess.svg": "/TeexCee/static/media/PayLess.39ee1001a748269d45d12b25f448ba47.svg",
     "static/media/InstagramButton.svg": "/TeexCee/static/media/InstagramButton.becf24a0190b5098142d197fa0231299.svg",
     "static/media/TCLogoMobile.svg": "/TeexCee/static/media/TCLogoMobile.8d3363c0f240905ec3c90151e09fc8b6.svg",
@@ -13,12 +14,14 @@
     "static/media/FacebookButton.svg": "/TeexCee/static/media/FacebookButton.212d4e928dc6c5a349b6b75690e10a47.svg",
     "static/media/LocationButton.svg": "/TeexCee/static/media/LocationButton.8162a5f607b641fc03e77d45befdb228.svg",
     "static/media/WhatsappButton.svg": "/TeexCee/static/media/WhatsappButton.ed2dd9d3df2d5497d42f98abed2b5ac1.svg",
+    "static/media/WhatsappLinkIcon.svg": "/TeexCee/static/media/WhatsappLinkIcon.b15469e2417a0cbfd883b944f778f558.svg",
     "static/media/AlarmClockWhite.svg": "/TeexCee/static/media/AlarmClockWhite.bdbb3aa481d9eedcf1e9e13f59930698.svg",
     "static/media/WhatsappLogo.svg": "/TeexCee/static/media/WhatsappLogo.667c191c68232d56191f3a0ec9461352.svg",
     "static/media/LocationWhiteIcon.svg": "/TeexCee/static/media/LocationWhiteIcon.8e156d170e1f05441389159e7eda802a.svg",
     "index.html": "/TeexCee/index.html",
     "static/media/InfoIcon.svg": "/TeexCee/static/media/InfoIcon.59918c531578cab91cf3dd79f00e5a66.svg",
     "static/media/FacebookLogo.svg": "/TeexCee/static/media/FacebookLogo.dd60335afe519d56e585ab7a331fce10.svg",
+    "static/media/ProductsIcon.svg": "/TeexCee/static/media/ProductsIcon.e260eff65080b29f6319814921cfbf61.svg",
     "static/media/LocationLogo.svg": "/TeexCee/static/media/LocationLogo.3671e5b0dd0af6eee91e41e177657537.svg",
     "static/media/MessageIcon.svg": "/TeexCee/static/media/MessageIcon.afc18423eadd1ba4e6c7d09ad3ef1c3a.svg",
     "static/media/AlarmClock.svg": "/TeexCee/static/media/AlarmClock.a643daf2a45743e83964491032e2b795.svg",
@@ -29,10 +32,10 @@
     "static/media/BagWhite.svg": "/TeexCee/static/media/BagWhite.2d5dd0f5dabe605d96b49c175acedc99.svg",
     "static/media/NairaSign.svg": "/TeexCee/static/media/NairaSign.1fa8fe0aca639f7003ee3cce0324db5e.svg",
     "main.488ba17b.css.map": "/TeexCee/static/css/main.488ba17b.css.map",
-    "main.15be0d32.js.map": "/TeexCee/static/js/main.15be0d32.js.map"
+    "main.2342c99a.js.map": "/TeexCee/static/js/main.2342c99a.js.map"
   },
   "entrypoints": [
     "static/css/main.488ba17b.css",
-    "static/js/main.15be0d32.js"
+    "static/js/main.2342c99a.js"
   ]
 }
