@@ -8,6 +8,7 @@ import { ReactComponent as InfoIcon } from "../Images/InfoIcon.svg";
 import { ReactComponent as LocationWhiteIcon } from "../Images/LocationWhiteIcon.svg";
 import { ReactComponent as ProductsIcon } from "../Images/ProductsIcon.svg";
 import { ReactComponent as MessageIcon } from "../Images/MessageIcon.svg";
+import { ReactComponent as SignUpIcon } from "../Images/SignUp.svg";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
@@ -45,7 +46,7 @@ const SideBarLogoDiv = styled.div`
   border-bottom: 1px solid white;
   width: 100%;
   height: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   display: flex;
 `;
 
@@ -130,6 +131,24 @@ const SideBarComponent = ({ isSideBarOpen, active }) => {
           Locate Us
         </SideBarItem>
       </Link>
+      <SideBarItem active={false}>
+        <a
+          href="https://forms.gle/998DekkjcNtgpcsd8"
+          target={"_blank"}
+          rel="noreferrer"
+          style={{
+            textDecoration: "none",
+            color: "white",
+            display: "flex",
+            alignItems: "center"
+          }}
+        >
+          <SideBarItemLogo>
+            <SignUpIcon width={"3rem"} />
+          </SideBarItemLogo>
+          Sign up
+        </a>
+      </SideBarItem>
     </SideBar>
   );
 };

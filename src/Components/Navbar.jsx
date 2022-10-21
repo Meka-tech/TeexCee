@@ -26,7 +26,7 @@ const NavItems = styled.ul`
   margin: 0px 100px;
   display: flex;
   justify-content: space-between;
-  flex: 0.35;
+  flex: 0.5;
   height: 100%;
 `;
 const NavItem = styled.li`
@@ -80,6 +80,19 @@ const Navbar = ({ active }) => {
           >
             Contact us
           </Link>
+        </NavItem>
+        <NavItem active={active} item="Contact us">
+          <a
+            href="https://forms.gle/998DekkjcNtgpcsd8"
+            target={"_blank"}
+            rel="noreferrer"
+            style={{
+              textDecoration: "none",
+              color: "black"
+            }}
+          >
+            Sign up
+          </a>
         </NavItem>
       </NavItems>
     </Container>
