@@ -6,6 +6,7 @@ import { ReactComponent as HamburgerIcon } from "../Images/HamburgerIcon.svg";
 import { ReactComponent as HomeIcon } from "../Images/HomeIcon.svg";
 import { ReactComponent as InfoIcon } from "../Images/InfoIcon.svg";
 import { ReactComponent as LocationWhiteIcon } from "../Images/LocationWhiteIcon.svg";
+import { ReactComponent as ProductsIcon } from "../Images/ProductsIcon.svg";
 import { ReactComponent as MessageIcon } from "../Images/MessageIcon.svg";
 import { Link } from "react-router-dom";
 
@@ -24,6 +25,7 @@ const NavComp = styled.div`
   margin: 10px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 `;
 
@@ -32,9 +34,10 @@ const SideBar = styled.div`
   height: 100vh;
   width: 60%;
   background-color: rgba(240, 67, 67, 1);
-  box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: ${(props) =>
+    props.open ? "0px 4px 4px 5px rgba(0, 0, 0, 0.25)" : null};
   z-index: 200;
-  transform: ${(props) => (props.open ? null : "translate(-60vw)")};
+  transform: ${(props) => (props.open ? null : "translate(-70vw)")};
   transition: all ease-in-out 0.2s;
   overflow: hidden;
 `;
@@ -64,7 +67,6 @@ const SideBarItem = styled.li`
 `;
 const SideBarItemLogo = styled.div`
   margin: 0px 10px;
-  transform: scale(0.8);
 `;
 const Shade = styled.div`
   position: absolute;
@@ -73,7 +75,7 @@ const Shade = styled.div`
   background-color: #252525;
   opacity: 0.5;
   z-index: 190;
-  transform: ${(props) => (props.open ? null : "translate(-100vw)")};
+  transform: ${(props) => (props.open ? null : "translate(-110vw)")};
   transition: all ease-in-out 0.18s;
   overflow: hidden;
 `;
@@ -82,7 +84,7 @@ const SideBarComponent = ({ isSideBarOpen, active }) => {
   return (
     <SideBar open={isSideBarOpen} active={active}>
       <SideBarLogoDiv>
-        <Link to="/home">
+        <Link to="/">
           <div style={{ marginTop: "50px", marginLeft: "20px" }}>
             <NavbarLogo />
           </div>
@@ -94,6 +96,14 @@ const SideBarComponent = ({ isSideBarOpen, active }) => {
             <HomeIcon />
           </SideBarItemLogo>
           Home
+        </SideBarItem>
+      </Link>
+      <Link to="/products" style={{ textDecoration: "none" }}>
+        <SideBarItem active={active} item="Products">
+          <SideBarItemLogo>
+            <ProductsIcon />
+          </SideBarItemLogo>
+          Products
         </SideBarItem>
       </Link>
       <Link to="/about-us" style={{ textDecoration: "none" }}>
@@ -133,7 +143,7 @@ const MobileNavbar = ({ active }) => {
   return (
     <Container>
       <NavComp>
-        <Link to="/home">
+        <Link to="/">
           <NavbarLogo />
         </Link>
 

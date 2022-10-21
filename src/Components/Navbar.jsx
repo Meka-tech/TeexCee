@@ -54,7 +54,7 @@ const Navbar = ({ active }) => {
   return (
     <Container>
       <LogoDiv>
-        <Link to="/home" style={{ textDecoration: "none", color: "inherit" }}>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
           <NavbarLogo />
         </Link>
       </LogoDiv>

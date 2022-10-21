@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "../Components/Navbar";
 import { ReactComponent as TCLogo } from "../Images/TClogo.svg";
 import { ReactComponent as Bag } from "../Images/Bag.svg";
 import { ReactComponent as NairaSign } from "../Images/NairaSign.svg";
 import { ReactComponent as AlarmClock } from "../Images/AlarmClock.svg";
+import { ReactComponent as BagWhite } from "../Images/BagWhite.svg";
+import { ReactComponent as NairaSignWhite } from "../Images/NairaSignWhite.svg";
+import { ReactComponent as AlarmClockWhite } from "../Images/AlarmClockWhite.svg";
 import MobileNavbar from "../Components/MobileNavbar";
 import { mobile } from "../responsive";
+import { ReactComponent as WhatsappLinkIcon } from "../Images/WhatsappLinkIcon.svg";
+import { CallIcon } from "../Components/CallButton/CallButton";
 
 const Container = styled.div``;
 const Body = styled.div`
@@ -20,7 +25,7 @@ const Body = styled.div`
   position: relative;
   font-family: "Montserrat", sans-serif;
   color: white;
-  ${mobile({ height: "110vh" })}
+  ${mobile({ height: "fit-content" })}
 `;
 const Logo = styled.div`
   opacity: 0.1;
@@ -36,13 +41,16 @@ const Content = styled.div`
 const Heading = styled.div`
   margin-top: 50px;
   margin-left: 30px;
-  ${mobile({ marginTop: "100px" })}
+  ${mobile({ marginTop: "100px", marginLeft: "0", marginBottom: "50px" })}
 `;
 const Header = styled.h1`
-  text-decoration: underline;
   font-weight: 400;
   font-family: "Dancing Script", cursive;
   font-size: 25px;
+  border-bottom: 2px solid white;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 `;
 const TextContent = styled.p`
   text-align: center;
@@ -51,7 +59,13 @@ const TextContent = styled.p`
   margin-left: auto;
   margin-right: auto;
   font-weight: 400;
-  ${mobile({ fontSize: "18px" })}
+  ${mobile({
+    fontSize: "18px",
+    lineHeight: "24px",
+    display: "flex",
+    alignItems: "center",
+    textAlign: "center",
+  })}
 `;
 const Aside = styled.div`
   display: flex;
@@ -82,19 +96,30 @@ const AsideM = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 10;
-  height: 60vh;
+  height: fit-content;
   width: 80%;
-  background-color: rgba(38, 50, 56, 1);
+
   ${mobile({ display: "flex" })}
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 `;
 const AboutDivM = styled.div`
+  background-color: rgba(38, 50, 56, 1);
   background-color: "red";
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px dashed white;
+  border-bottom: 2px dashed gray;
+  height: 200px;
+`;
+const AboutDivMM = styled.div`
+  background-color: rgba(38, 50, 56, 1);
+  background-color: "red";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   height: 200px;
 `;
 const AboutHeaderM = styled.div`
@@ -120,6 +145,17 @@ const AboutContentM = styled.p`
   margin-right: auto;
   font-weight: 200;
 `;
+const WhatsappLink = styled.div`
+  display: none;
+  ${mobile({ display: "flex" })}
+  margin-bottom: 20px;
+  width: 100%;
+  justify-content: end;
+  transform: ${(props) => (props.visible ? "scale(1)" : "scale(0)")};
+  transition: all 0.3s ease-in-out;
+  height: 60px;
+  margin-right: 45px;
+`;
 
 const ArrayItem = [
   [
@@ -138,8 +174,29 @@ const ArrayItem = [
     "We are ready to serve you Monday - Saturday from 8am - 9pm daily and offer the best selection of products.",
   ],
 ];
+const ArrayItemM = [
+  [
+    <BagWhite />,
+    "Quality Products",
+    "We work with the best suppliers to offer our customers the best products of the highest quality",
+  ],
+  [
+    <NairaSignWhite />,
+    "Affordable Prices",
+    "Thanks to our affordable pricing policy, our customers don’t have to overpay for the products they need.",
+  ],
+  [
+    <AlarmClockWhite />,
+    "Opening Hours",
+    "We are ready to serve you Monday - Saturday from 8am - 9pm daily and offer the best selection of products.",
+  ],
+];
 
 const AboutUs = () => {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setVisible(true), 1000);
+  }, [visible]);
   return (
     <Container>
       <Navbar active="About us" />
@@ -155,7 +212,7 @@ const AboutUs = () => {
               TEE CEE supermarket is a family owned store that has been offering
               quality products for your everyday needs since 2017, while also
               providing personal shopping and Logistics both Home and Abroad for
-              our esteemed customers.{" "}
+              our esteemed customers.
             </TextContent>
           </Heading>
         </Content>
@@ -171,19 +228,46 @@ const AboutUs = () => {
           })}
         </Aside>
         <AsideM>
-          {ArrayItem.map((item, index) => {
-            return (
-              <AboutDivM key={index}>
-                <AboutHeaderM>
-                  <IconM> {item[0]}</IconM>
-                  <AboutTitleM>{item[1]}</AboutTitleM>
-                </AboutHeaderM>
+          {ArrayItemM.map((item, index) => {
+            if (ArrayItemM.length !== index + 1) {
+              return (
+                <AboutDivM key={index}>
+                  <AboutHeaderM>
+                    <IconM> {item[0]}</IconM>
+                    <AboutTitleM>{item[1]}</AboutTitleM>
+                  </AboutHeaderM>
 
-                <AboutContentM>{item[2]}</AboutContentM>
-              </AboutDivM>
-            );
+                  <AboutContentM>{item[2]}</AboutContentM>
+                </AboutDivM>
+              );
+            }
+            if (ArrayItemM.length === index + 1) {
+              return (
+                <AboutDivMM key={index}>
+                  <AboutHeaderM>
+                    <IconM> {item[0]}</IconM>
+                    <AboutTitleM>{item[1]}</AboutTitleM>
+                  </AboutHeaderM>
+
+                  <AboutContentM>{item[2]}</AboutContentM>
+                </AboutDivMM>
+              );
+            }
           })}
         </AsideM>
+        <WhatsappLink visible={visible}>
+          <CallIcon style={{}} />
+          <a
+            href="https://wa.me/message/QHH7NMUFHUV2L1"
+            target="_blank"
+            rel="noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <WhatsappLinkIcon
+              style={{ transform: "scale(0.75)", marginTop: "-10px" }}
+            />
+          </a>
+        </WhatsappLink>
       </Body>
     </Container>
   );

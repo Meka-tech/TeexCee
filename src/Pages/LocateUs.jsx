@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "../Components/Navbar";
 import { ReactComponent as TCLogo } from "../Images/TClogo.svg";
@@ -8,6 +8,8 @@ import { ReactComponent as LocationLogo } from "../Images/LocationLogo.svg";
 import { ReactComponent as LocationButtonMobile } from "../Images/LocationButtonMobile.svg";
 import MobileNavbar from "../Components/MobileNavbar";
 import { mobile } from "../responsive";
+import { ReactComponent as WhatsappLinkIcon } from "../Images/WhatsappLinkIcon.svg";
+import { CallIcon } from "../Components/CallButton/CallButton";
 
 const Container = styled.div``;
 const Body = styled.div`
@@ -33,7 +35,7 @@ const Content = styled.div`
   width: 100%;
   height: 55%;
   z-index: 10;
-  ${mobile({ marginTop: "0px" })}
+  ${mobile({ marginTop: "25px" })}
 `;
 const Heading = styled.div`
   margin-top: 20px;
@@ -105,8 +107,23 @@ const Button = styled.div`
   cursor: pointer;
   transform: scale(0.7);
 `;
-
+const WhatsappLink = styled.div`
+  display: none;
+  ${mobile({ display: "flex" })}
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: 30px;
+  align-items: center;
+  justify-content: end;
+  transform: ${(props) => (props.visible ? "scale(1.3)" : "scale(0)")};
+  transition: all 0.3s ease-in-out;
+`;
 const LocateUs = () => {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setVisible(true), 1000);
+  }, [visible]);
   return (
     <Container>
       <MobileNavbar active="Locate us" />
@@ -127,7 +144,7 @@ const LocateUs = () => {
           <LocationLogo />
           <TextContent>Tap to view on your map.</TextContent>
           <a
-            href="https://g.co/kgs/drjxR9"
+            href="https://maps.app.goo.gl/enrsjGAR3rxyQuTNA"
             target="_blank"
             rel="noreferrer"
             style={{ textDecoration: "none" }}
@@ -135,6 +152,20 @@ const LocateUs = () => {
             <LocationButtonMobile />
           </a>
         </Aside>
+        <WhatsappLink visible={visible}>
+          <CallIcon scale="0.75" />
+          <a
+            href="https://wa.me/message/QHH7NMUFHUV2L1"
+            target="_blank"
+            rel="noreferrer"
+            style={{ textDecoration: "none", transform: "scale(0.75)" }}
+          >
+            <WhatsappLinkIcon
+              visible={visible}
+              style={{ transform: "scale(0.9)" }}
+            />
+          </a>
+        </WhatsappLink>
       </Body>
     </Container>
   );
